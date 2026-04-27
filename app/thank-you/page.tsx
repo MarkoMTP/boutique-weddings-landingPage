@@ -11,7 +11,7 @@ export default function ThankYou() {
         <div className="max-w-2xl mx-auto text-center space-y-8">
           <h1 className="font-cormorant text-5xl md:text-7xl">Thank You</h1>
           <p className="font-sans text-lg text-gray-600">
-            We have received your inquiry. Leandra Svizzero or a member of the Eventoile team will be in touch with you shortly.
+            We have received your inquiry. Giorgia or a member of the Boutique Weddings team will be in touch with you shortly.
           </p>
           <div className="pt-8">
             <Button asChild variant="outline" className="rounded-full px-8 py-6 text-sm uppercase tracking-widest">

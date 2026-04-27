@@ -63,7 +63,7 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen min-h-[800px] flex items-end justify-start overflow-hidden pb-12 md:pb-24"
+      className="relative h-screen min-h-[800px] flex items-end justify-start overflow-hidden pb-12 md:pb-24 bg-black"
     >
       {/* Background Image with Parallax */}
       <motion.div
@@ -71,19 +71,19 @@ export function Hero() {
         style={{ y: imageY, scale: imageScale }}
       >
         <Image
-          src="/images/herocomo.jpg"
+          src="/clientprof.jpg"
           alt="Candid moment of a luxury wedding couple"
           fill
           priority
-          className="object-cover object-[75%_center] md:object-center"
+          className="object-cover object-[40%_bottom] md:object-center"
           sizes="100vw"
           quality={90}
         />
       </motion.div>
 
       {/* Gradient Overlay - Deeper, Moodier Editorial Feel */}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-olive/80 via-transparent to-transparent mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-olive/30 via-transparent to-transparent mix-blend-multiply" />
 
       {/* Content */}
       <motion.div

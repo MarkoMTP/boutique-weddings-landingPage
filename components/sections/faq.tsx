@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { AnimatedSection } from "@/components/shared/animated-section"
+import Image from "next/image"
 
 const categories = [
   {
@@ -94,7 +95,7 @@ export function FAQ() {
 
         {/* Editorial Section Header with Picture Frames */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-24 lg:mb-32">
-          
+
           <AnimatedSection className="lg:col-span-6 flex flex-col justify-center">
             <p className="text-[10px] tracking-[0.4em] uppercase text-olive mb-6 font-medium">
               FAQ
@@ -117,14 +118,14 @@ export function FAQ() {
 
           {/* Picture Frames Collage */}
           <AnimatedSection delay={0.2} className="lg:col-span-6 relative h-[400px] lg:h-[600px] w-full mt-10 lg:mt-0">
-            
+
             {/* Frame 1: Tall Portrait */}
             <div className="absolute right-0 top-0 w-[55%] lg:w-[50%] aspect-[3/4] bg-stone/20 border border-stone/30 flex items-center justify-center overflow-hidden group">
               <div className="absolute inset-x-0 bottom-4 text-center">
                 <span className="text-[9px] tracking-[0.2em] uppercase text-olive/40 font-medium">Image Placeholder</span>
               </div>
               {/* User instructions: Add your next/image here */}
-              {/* <Image src="YOUR_IMAGE_PATH_HERE" alt="FAQ Image 1" fill className="object-cover" /> */}
+              <Image src="/faq1.jpg" alt="FAQ Image 1" fill className="object-cover" />
             </div>
 
             {/* Frame 2: Wide Landscape Overlapping */}
@@ -132,8 +133,9 @@ export function FAQ() {
               <div className="absolute inset-x-0 bottom-4 text-center">
                 <span className="text-[9px] tracking-[0.2em] uppercase text-olive/60 font-medium">Image Placeholder</span>
               </div>
-              {/* User instructions: Add your next/image here */}
-              {/* <Image src="YOUR_IMAGE_PATH_HERE" alt="FAQ Image 2" fill className="object-cover" /> */}
+              <Image src="/faq2.jpg" alt="FAQ Image 1" fill className="object-cover" />
+
+
             </div>
 
           </AnimatedSection>

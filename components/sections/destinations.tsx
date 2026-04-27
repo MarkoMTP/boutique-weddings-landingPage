@@ -35,7 +35,7 @@ export function Destinations() {
     <section id="destinations" className="bg-sand relative py-24 lg:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-start">
-          
+
           {/* Left Column: Sticky Editorial Text */}
           <div className="lg:col-span-5 lg:sticky top-32">
             <AnimatedSection direction="up">
@@ -47,16 +47,16 @@ export function Destinations() {
                 <br />
                 <span className="italic text-terracotta">Defines Romance</span>
               </h2>
-              
+
               <div className="w-16 h-px bg-stone mb-10" />
-              
+
               <p className="text-lg text-olive/90 font-light leading-relaxed mb-6 italic">
                 Lake Como is not simply a location — it is the atmosphere, elegance, and emotion that shape the entire wedding experience.
               </p>
               <p className="text-sm md:text-base text-olive/80 font-light leading-relaxed mb-12">
                 Surrounded by dramatic mountains, shimmering waters, historic villas, and timeless Italian charm, Lake Como has become one of the world's most desired wedding destinations for couples seeking a celebration that feels both iconic and deeply intimate.
               </p>
-              
+
               <a
                 href="#contact"
                 className="inline-flex items-center gap-4 text-[10px] tracking-[0.3em] uppercase text-charcoal hover:text-terracotta transition-colors group"
@@ -71,11 +71,11 @@ export function Destinations() {
           <div className="lg:col-span-7 relative">
             {/* Main Editorial Image cluster */}
             <div className="relative w-full aspect-[4/5] lg:aspect-[4/6] mb-16 lg:mb-24 flex items-center justify-center">
-              
+
               {/* Image 1: Main Center/Right */}
               <AnimatedSection direction="up" delay={0.2} className="absolute right-0 top-0 w-[80%] h-[85%] z-20 overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/destinations/lake-como.jpg"
+                  src="/dest 2.jpg"
                   alt="Lake Como wedding venue"
                   fill
                   className="object-cover"
@@ -86,18 +86,18 @@ export function Destinations() {
               {/* Image 2: Subtle overlapping left */}
               <AnimatedSection direction="left" delay={0.4} className="absolute left-0 bottom-[10%] w-[45%] aspect-square z-30 overflow-hidden shadow-xl border-4 border-sand hidden md:block">
                 <Image
-                  src="/images/destinations/amalfi.jpg"
+                  src="/dest1.jpg"
                   alt="Italian elegant details"
                   fill
                   className="object-cover"
                   sizes="25vw"
                 />
               </AnimatedSection>
-              
+
               {/* Image 3: Background soft block / smaller image overlay */}
               <AnimatedSection direction="down" delay={0.1} className="absolute top-[10%] left-[10%] w-[35%] h-[30%] z-10 overflow-hidden opacity-50 mix-blend-multiply hidden lg:block">
                 <Image
-                  src="/images/destinations/ravello.jpg"
+                  src="/dest3.jpg"
                   alt="Lake view terrace"
                   fill
                   className="object-cover"
@@ -105,12 +105,12 @@ export function Destinations() {
                 />
               </AnimatedSection>
             </div>
-            
+
             {/* Staggered Feature List */}
             <div className="relative z-10 flex flex-col gap-6 lg:gap-10 lg:-mt-48 lg:ml-12">
               {features.map((feature, idx) => (
-                <AnimatedSection 
-                  key={feature.number} 
+                <AnimatedSection
+                  key={feature.number}
                   delay={0.3 + (idx * 0.15)}
                   className={`bg-cream p-10 md:p-12 shadow-2xl shadow-charcoal/5 lg:w-[85%] ${idx % 2 !== 0 ? 'lg:self-end' : 'lg:self-start'}`}
                 >
@@ -128,7 +128,7 @@ export function Destinations() {
               ))}
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

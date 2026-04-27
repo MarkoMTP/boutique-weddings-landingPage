@@ -105,7 +105,7 @@ export function InquiryForm() {
           </h2>
           <div className="w-16 h-px bg-stone mx-auto mb-8" />
           <p className="text-lg text-olive/80 font-light max-w-xl mx-auto italic">
-            Begin the conversation about your extraordinary celebration. Leandra Svizzero reviews all inquiries personally.
+            Begin the conversation about your extraordinary celebration. Giorgia reviews all inquiries personally.
           </p>
         </AnimatedSection>
 
@@ -215,7 +215,7 @@ export function InquiryForm() {
                     </div>
 
                     <p className="text-center text-sm text-muted-foreground pt-2">
-                      <span className="italic">Leandra Svizzero reviews all inquiries personally.</span>
+                      <span className="italic">Giorgia reviews all inquiries personally.</span>
                     </p>
                   </div>
                 </motion.form>
@@ -234,7 +234,7 @@ export function InquiryForm() {
                     Application Received
                   </h3>
                   <p className="text-lg text-muted-foreground font-light mb-8 max-w-md mx-auto">
-                    Thank you for your interest. Leandra will personally review your application and respond within 48-72 hours.
+                    Thank you for your interest. Giorgia will personally review your application and respond within 48-72 hours.
                   </p>
                 </motion.div>
               )}
@@ -253,14 +253,14 @@ export function InquiryForm() {
                 Book a <span className="italic text-olive/80">Call Directly</span>
               </h3>
               <p className="text-base text-olive/70 font-light mb-10 max-w-sm mx-auto leading-relaxed">
-                Prefer an immediate conversation? Schedule a 30-minute discovery call with Leandra to discuss your vision in detail.
+                Prefer an immediate conversation? Schedule a 30-minute discovery call with Giorgia to discuss your vision in detail.
               </p>
               <div className="pt-4">
                 <Button
                   asChild
                   className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
                 >
-                  <a href="https://calendly.com/eventoile/30min" target="_blank" rel="noopener noreferrer">
+                  <a href="https://calendly.com/boutiqueweddings/30min" target="_blank" rel="noopener noreferrer">
                     Schedule Your Consultation
                   </a>
                 </Button>

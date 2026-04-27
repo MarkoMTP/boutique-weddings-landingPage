@@ -9,7 +9,7 @@ import Image from "next/image"
 
 const navItems = [
   { label: "Profile", href: "#profile" },
-  { label: "Destinations", href: "#destinations" },
+  { label: "Lake Como", href: "#destinations" },
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#commissions" },
@@ -44,20 +44,19 @@ export function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-sm"
-            : "bg-background/95 backdrop-blur-sm"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+          ? "bg-background/95 backdrop-blur-sm border-b border-border shadow-sm"
+          : "bg-background/95 backdrop-blur-sm"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 group">
-              <div className="relative h-12 w-32 md:h-16 md:w-40 transition-all duration-300">
+              <div className="relative h-14 w-44 md:h-20 md:w-56 transition-all duration-300">
                 <Image
-                  src="/images/logo.jpg"
-                  alt="Eventoile Logo"
+                  src="/Logo HD-07.png"
+                  alt="Boutique Weddings Logo"
                   fill
                   className="object-contain"
                   priority

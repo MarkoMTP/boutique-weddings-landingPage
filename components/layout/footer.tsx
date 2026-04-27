@@ -16,7 +16,7 @@ const galleryImages = [
 
 const footerLinks = {
   experience: [
-    { label: "Destinations", href: "#destinations" },
+    { label: "Lake Como", href: "#destinations" },
     { label: "Our Process", href: "#process" },
     { label: "Services", href: "#commissions" },
     { label: "About Giorgia", href: "#about" },
@@ -40,14 +40,19 @@ export function Footer() {
     <footer className="bg-charcoal text-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-cream/10 pb-20">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-5">
-            <div className="relative inline-block mb-8">
-              <span className="font-serif text-3xl md:text-4xl tracking-[0.15em] uppercase text-cream">
-                Boutique Weddings
-              </span>
-            </div>
+            <Link href="/" className="relative inline-block mb-8 group">
+              <div className="relative h-14 w-44 md:h-20 md:w-56 transition-all duration-300">
+                <Image
+                  src="/Logo HD-07.png"
+                  alt="Boutique Weddings Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </Link>
             <p className="text-cream/70 font-light leading-relaxed max-w-sm mb-10 text-sm md:text-base">
               Luxury Lake Como wedding planning, crafted with heart, precision,
               and complete dedication — since 2007.

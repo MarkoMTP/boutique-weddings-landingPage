@@ -17,21 +17,21 @@ const values = [
     title: "Care",
     description:
       "Planning from abroad can feel overwhelming. With years of experience and trusted systems, we remove uncertainty, solve problems early, and guide the process with calm precision.",
-    image: "/images/destinations/amalfi.jpg"
+    image: "/g1.jpg"
   },
   {
     number: "03",
     title: "Curation",
     description:
       "We design weddings with intentional detail — honoring your traditions, style, and story so every moment feels meaningful and unmistakably yours.",
-    image: "/images/destinations/tuscany.jpg"
+    image: "/g2.jpg"
   },
   {
     number: "04",
     title: "Connection",
     description:
       "Relationships are at the heart of everything we do. We value trust, warmth, and long-standing partnerships with both our couples and our hand-selected collaborators.",
-    image: "/images/destinations/sicily.jpg"
+    image: "/g4.jpeg"
   },
 ]
 
@@ -47,10 +47,10 @@ export function EditorialSpotlight() {
           <div className="lg:col-span-8 relative z-0">
             <AnimatedSection direction="right" className="relative aspect-[4/5] lg:aspect-square overflow-hidden shadow-2xl shadow-charcoal/10">
               <Image
-                src="/images/lea 4.jpeg"
+                src="/giorgia.jpeg"
                 alt="Giorgia — Founder of Boutique Weddings"
                 fill
-                className="object-cover"
+                className="object-cover object-[20%_top]"
                 sizes="(max-width: 768px) 100vw, 70vw"
                 priority
               />
@@ -119,9 +119,9 @@ export function EditorialSpotlight() {
               >
                 {/* Seamless Blended Image Background */}
                 {value.image && (
-                  <div 
+                  <div
                     className="absolute inset-y-0 right-0 w-2/3 lg:w-[60%] z-0 pointer-events-none transition-opacity duration-1000 opacity-30 group-hover:opacity-60"
-                    style={{ 
+                    style={{
                       WebkitMaskImage: "linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)",
                       maskImage: "linear-gradient(to left, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%)"
                     }}
@@ -142,7 +142,7 @@ export function EditorialSpotlight() {
                       {value.number}
                     </span>
                   </div>
-                  
+
                   <div className="max-w-[85%] relative z-10">
                     <h3 className="font-serif text-2xl md:text-3xl text-charcoal mb-4">
                       {value.title}

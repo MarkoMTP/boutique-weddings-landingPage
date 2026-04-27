@@ -25,12 +25,12 @@ export function ClientProfile() {
   return (
     <section id="profile" className="w-full bg-cream lg:h-screen lg:min-h-[800px] lg:max-h-[1000px] flex items-center relative overflow-hidden">
       <div className="w-full h-full flex flex-col lg:flex-row items-center">
-        
+
         {/* Left Column: Full-Bleed Image */}
         <div className="w-full lg:w-[55%] h-[50vh] lg:h-full relative z-0">
           <Image
-            src="/images/destinations/tuscany.jpg"
-            alt="Elegant wedding details and meaningful luxury"
+            src="/hero.jpg"
+            alt="Elegant wedding couple"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 55vw"
@@ -43,7 +43,7 @@ export function ClientProfile() {
         {/* Right Column: Spaced Editorial Text Block */}
         <div className="w-full lg:w-[45%] flex justify-center lg:justify-start lg:ml-12 relative z-20">
           <AnimatedSection className="bg-sand/50 p-10 md:p-14 lg:p-16 w-full max-w-2xl shadow-xl shadow-charcoal/5 mx-6 lg:mx-0 mt-8 lg:mt-0 flex flex-col">
-            
+
             {/* Header Content */}
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4 leading-[1.05] text-balance">
               Designed for Couples Who Value <span className="italic text-terracotta">Meaningful Luxury</span>
@@ -65,7 +65,7 @@ export function ClientProfile() {
                       {column.title}
                     </span>
                   </div>
-                  
+
                   <div className="w-full sm:w-3/4">
                     <h3 className="font-serif text-xl text-charcoal mb-2">
                       {column.heading}
@@ -73,7 +73,7 @@ export function ClientProfile() {
                     <p className="text-olive/90 font-light leading-relaxed text-xs sm:text-sm">
                       {column.body}
                     </p>
-                    
+
                     {/* Add Call to Action under the final section */}
                     {index === 2 && (
                       <button
