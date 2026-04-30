@@ -42,8 +42,8 @@ function PricingColumn({
   return (
     <motion.div
       className={`relative flex flex-col h-full premium-card ${pkg.featured
-          ? "bg-charcoal text-cream shadow-2xl shadow-black/20"
-          : "bg-charcoal/40 border border-charcoal/20 text-cream backdrop-blur-sm"
+        ? "bg-charcoal text-cream shadow-2xl shadow-black/20"
+        : "bg-charcoal/40 border border-charcoal/20 text-cream backdrop-blur-sm"
         }`}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
@@ -110,16 +110,15 @@ export function Commissions() {
   return (
     <section id="commissions" className="py-24 lg:py-32 bg-olive text-cream relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-        
+
         {/* Left Column: Intro & Transparency */}
-        <AnimatedSection className="lg:col-span-5 flex flex-col items-start text-left">
+        <AnimatedSection className="lg:col-span-4 flex flex-col items-start text-left">
           <p className="text-[10px] tracking-[0.4em] uppercase text-sand/60 mb-6 font-medium">
             Investment
           </p>
-          <h2 className="font-serif text-5xl md:text-6xl text-cream mb-8 leading-[1.05]">
-            Curated Experiences,
-            <br className="hidden md:block" />
-            <span className="italic text-gold">Transparent Pricing</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-cream mb-8 leading-[1.05]">
+            Curated Experiences,{" "}
+            <span className="block mt-2 italic text-gold">Transparent Pricing</span>
           </h2>
           <div className="h-px w-16 bg-gold/40 mb-8" />
           <p className="text-lg text-cream/70 font-light leading-relaxed mb-12 lg:mb-16">
@@ -127,7 +126,7 @@ export function Commissions() {
           </p>
 
           <div className="bg-charcoal/40 border border-cream/10 p-8 rounded-sm text-left">
-             <div className="text-[10px] tracking-[0.4em] uppercase text-gold font-medium mb-4">
+            <div className="text-[10px] tracking-[0.4em] uppercase text-gold font-medium mb-4">
               Maximum Transparency
             </div>
             <p className="text-sm text-cream/80 font-light leading-relaxed mb-4">
@@ -141,9 +140,9 @@ export function Commissions() {
 
         {/* Right Column: The Package Card */}
         <AnimatedSection delay={0.2} className="lg:col-span-7 h-full w-full max-w-xl mx-auto lg:max-w-none mt-12 lg:mt-0">
-           <PricingColumn pkg={packages[0]} index={0} />
+          <PricingColumn pkg={packages[0]} index={0} />
         </AnimatedSection>
-        
+
       </div>
     </section>
   )

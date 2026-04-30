@@ -63,21 +63,21 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen min-h-[800px] flex items-end justify-start overflow-hidden pb-12 md:pb-24 bg-black"
+      className="relative h-screen min-h-[800px] flex items-end justify-start overflow-hidden pb-32 md:pb-24 bg-black"
     >
       {/* Background Image with Parallax */}
       <motion.div
         className="absolute inset-0"
-        style={{ y: imageY, scale: imageScale }}
+
       >
         <Image
-          src="/clientprof.jpg"
+          src="/hero.jpg"
           alt="Candid moment of a luxury wedding couple"
           fill
           priority
-          className="object-cover object-[40%_bottom] md:object-center"
-          sizes="100vw"
-          quality={90}
+          className="object-cover object-[50%_65%]"
+          quality={100}
+          unoptimized={true}
         />
       </motion.div>
 
@@ -96,9 +96,7 @@ export function Hero() {
         {/* Decorative Line Left & Tagline */}
         <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
           <div className="w-16 h-px bg-gold" />
-          <p className="text-[10px] md:text-xs tracking-[0.4em] uppercase font-light text-white/80">
-            Boutique Weddings — Lake Como, Italy
-          </p>
+
         </motion.div>
 
         {/* Main Headline - Left Aligned, Dramatic */}
@@ -106,40 +104,28 @@ export function Hero() {
           variants={itemVariants}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.05] mb-8 text-balance max-w-5xl"
         >
-          Luxury Wedding Planner Lake Como, <br className="hidden md:block" />
-          <span className="italic text-gold">Planned With Heart, Precision & Exclusivity</span>
+          Luxury Wedding Planner Lake Como
+
         </motion.h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 w-full items-end mt-4">
-          {/* Subheadline */}
-          <motion.p
-            variants={itemVariants}
-            className="text-base md:text-lg font-light leading-relaxed text-white/90 max-w-md"
-          >
-            For couples who want more than a beautiful wedding — they want complete peace of mind, exceptional taste, and a planner who treats them like family.
-          </motion.p>
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col items-start gap-6 mt-4 w-full"
+        >
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <Button
+              onClick={() => handleNavClick("#inquiry")}
+              className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-black text-white hover:bg-black/80 transition-all duration-500 border-0"
+            >
+              Book Your Private Consultation
+            </Button>
+          </div>
 
-          {/* CTAs and Qualifier side by side on desktop */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col items-start lg:items-end gap-6 w-full"
-          >
-            <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
-              <Button
-                onClick={() => handleNavClick("#inquiry")}
-                className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-black text-white hover:bg-black/80 transition-all duration-500 border-0"
-              >
-                Book Your Private Consultation
-              </Button>
-
-            </div>
-
-            <div className="flex items-center gap-3 text-gold text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-light">
-              <span className="w-8 h-px bg-gold/50" />
-              <span>Limited availability for 2026/2027</span>
-            </div>
-          </motion.div>
-        </div>
+          <div className="flex items-center gap-3 text-gold text-[9px] md:text-[10px] tracking-[0.3em] uppercase font-light">
+            <span className="w-8 h-px bg-gold/50" />
+            <span>Limited availability for 2026/2027</span>
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Scroll Indicator - Bottom Right */}

@@ -15,16 +15,10 @@ const categories = [
     items: [
       {
         q: "How will we communicate throughout the planning process?",
-        a: "We stay in regular contact via email and are also available by phone whenever needed. Clear, timely communication is one of the foundations of our service.",
+        a: "We stay in regular contact via email, zoom meetings and are also available by phone whenever needed. Clear, timely communication is one of the foundations of our service.",
       },
-      {
-        q: "How do meetings take place if we live abroad?",
-        a: "Most meetings are held virtually through Zoom or Google Meet, making planning seamless no matter where you are in the world.",
-      },
-      {
-        q: "How often will we receive updates?",
-        a: "We keep you fully informed throughout the process and share updates promptly as soon as we receive confirmations, options, or important information from venues and vendors.",
-      },
+
+
       {
         q: "How do you manage time zone differences?",
         a: "We regularly work with international couples and understand the realities of different time zones. We do our best to respond quickly and efficiently, regardless of where you are based.",
@@ -40,7 +34,7 @@ const categories = [
     items: [
       {
         q: "Do you only plan large weddings?",
-        a: "Not at all. We expertly plan weddings of many sizes — from intimate celebrations and elegant elopements to larger multi-day destination events.",
+        a: "Not at all. We expertly plan weddings of many sizes — from intimate celebrations to larger multi-day destination events.",
       },
       {
         q: "Can you assist with guest logistics and travel?",
@@ -52,23 +46,8 @@ const categories = [
       },
     ],
   },
-  {
-    label: "Budget",
-    items: [
-      {
-        q: "Can you help us stay within budget?",
-        a: "Yes. We carefully build and manage a working budget throughout the planning journey, helping you allocate resources wisely while protecting the quality of the experience.",
-      },
-      {
-        q: "Can we use our own spreadsheet?",
-        a: "Of course. However, many couples prefer our structured planning tools and budget systems, which simplify the process and remove unnecessary stress from your plate.",
-      },
-      {
-        q: "Will you help us prioritise where to invest?",
-        a: "Yes. We help clients understand where luxury has the greatest impact — and where thoughtful decisions can create value without compromise.",
-      },
-    ],
-  },
+
+
   {
     label: "Timelines",
     items: [

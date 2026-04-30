@@ -29,7 +29,7 @@ export function ClientProfile() {
         {/* Left Column: Full-Bleed Image */}
         <div className="w-full lg:w-[55%] h-[50vh] lg:h-full relative z-0">
           <Image
-            src="/hero.jpg"
+            src="/newHero.jpg"
             alt="Elegant wedding couple"
             fill
             className="object-cover"
