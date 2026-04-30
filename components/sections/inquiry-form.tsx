@@ -55,7 +55,7 @@ export function InquiryForm() {
     setIsLoading(true)
 
     try {
-      const response = await fetch("https://hook.eu1.make.com/blxfsrdu5rnqs1b6rg6a5b4r6vukzgyb", {
+      const response = await fetch("https://hook.eu1.make.com/3a73dpbncmpdqp6a9xoqdbuzd35ktuhd", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
