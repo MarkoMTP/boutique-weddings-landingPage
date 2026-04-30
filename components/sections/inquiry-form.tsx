@@ -41,6 +41,12 @@ export function InquiryForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.guestNumber || !formData.investment || !formData.eventDate || !formData.message) {
+      alert("Please fill in all required fields before submitting.")
+      return
+    }
+
     setIsLoading(true)
 
     try {
@@ -153,7 +159,7 @@ export function InquiryForm() {
 
                       <div className="space-y-2">
                         <Label className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Investment Limit</Label>
-                        <Select onValueChange={(v) => setFormData(p => ({ ...p, investment: v }))}>
+                        <Select required onValueChange={(v) => setFormData(p => ({ ...p, investment: v }))}>
                           <SelectTrigger className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus:ring-0 text-charcoal font-light shadow-none focus:border-terracotta outline-none">
                             <SelectValue placeholder="Select budget" />
                           </SelectTrigger>
@@ -168,7 +174,7 @@ export function InquiryForm() {
                     <div className="space-y-2">
                       <Label htmlFor="eventDate" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Preferred Timeframe</Label>
                       <Input
-                        id="eventDate" name="eventDate" type="text" placeholder="Summer 2026 / Autumn 2027" value={formData.eventDate} onChange={handleInputChange}
+                        id="eventDate" name="eventDate" type="text" placeholder="Summer 2026 / Autumn 2027" value={formData.eventDate} onChange={handleInputChange} required
                         className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus-visible:ring-0 focus-visible:border-terracotta text-charcoal font-light shadow-none"
                       />
                     </div>
@@ -177,7 +183,7 @@ export function InquiryForm() {
                     <div className="space-y-2">
                       <Label htmlFor="message" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">YOUR VISION</Label>
                       <textarea
-                        id="message" name="message" rows={4}
+                        id="message" name="message" rows={4} required
                         placeholder="Tell us about the atmosphere, the aesthetic, and the experience you wish to create..."
                         value={formData.message} onChange={handleInputChange}
                         className="w-full bg-transparent border-0 border-b border-stone/50 px-0 py-3 text-charcoal font-light placeholder:text-stone focus:ring-0 focus:outline-none focus:border-terracotta resize-none shadow-none"
