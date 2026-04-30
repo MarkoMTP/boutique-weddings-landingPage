@@ -246,7 +246,7 @@ export function InquiryForm() {
                   asChild
                   className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
                 >
-                  <a href="https://calendly.com/boutiqueweddings/30min" target="_blank" rel="noopener noreferrer">
+                  <a href="https://calendly.com/boutique-weddings-info/30min" target="_blank" rel="noopener noreferrer">
                     Schedule Your Consultation
                   </a>
                 </Button>
