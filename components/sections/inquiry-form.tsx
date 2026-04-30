@@ -16,16 +16,6 @@ import {
 import { AnimatedSection } from "@/components/shared/animated-section"
 import { Check, Lock } from "lucide-react"
 
-const regions = [
-  "Tuscany, Italy",
-  "Lake Como, Italy",
-  "Amalfi Coast, Italy",
-  "Apulia (Puglia), Italy",
-  "Umbria, Italy",
-  "Sicily, Italy",
-  "Multiple Regions",
-  "Not Yet Decided",
-]
 
 const investmentRanges = [
   { value: "100k+", label: "€100,000+" },
@@ -44,7 +34,6 @@ export function InquiryForm() {
     lastName: "",
     email: "",
     guestNumber: "",
-    region: "",
     investment: "",
     eventDate: "",
     message: "",
@@ -158,31 +147,7 @@ export function InquiryForm() {
                       </div>
                     </div>
 
-                    {/* Select Row */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                      <div className="space-y-2">
-                        <Label className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Region</Label>
-                        <Select onValueChange={(v) => setFormData(p => ({ ...p, region: v }))}>
-                          <SelectTrigger className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus:ring-0 text-charcoal font-light shadow-none focus:border-terracotta outline-none">
-                            <SelectValue placeholder="Select location" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {regions.map(r => <SelectItem key={r} value={r}>{r}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Investment Limit</Label>
-                        <Select onValueChange={(v) => setFormData(p => ({ ...p, investment: v }))}>
-                          <SelectTrigger className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus:ring-0 text-charcoal font-light shadow-none focus:border-terracotta outline-none">
-                            <SelectValue placeholder="Select budget" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {investmentRanges.map(r => <SelectItem key={r.value} value={r.value}>{r.label}</SelectItem>)}
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
+
 
                     {/* Timeframe */}
                     <div className="space-y-2">
