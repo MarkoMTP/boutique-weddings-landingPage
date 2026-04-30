@@ -147,93 +147,106 @@ export function InquiryForm() {
                       </div>
                     </div>
 
+                    {/* Select Row */}
 
-
-                    {/* Timeframe */}
                     <div className="space-y-2">
-                      <Label htmlFor="eventDate" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Preferred Timeframe</Label>
-                      <Input
-                        id="eventDate" name="eventDate" type="text" placeholder="Summer 2026 / Autumn 2027" value={formData.eventDate} onChange={handleInputChange}
-                        className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus-visible:ring-0 focus-visible:border-terracotta text-charcoal font-light shadow-none"
-                      />
+                      <Label className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Investment Limit</Label>
+                      <Select onValueChange={(v) => setFormData(p => ({ ...p, investment: v }))}>
+                        <SelectTrigger className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus:ring-0 text-charcoal font-light shadow-none focus:border-terracotta outline-none">
+                          <SelectValue placeholder="Select budget" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {investmentRanges.map(r => <SelectItem key={r.value} value={r.value}>{r.label}</SelectItem>)}
+                        </SelectContent>
+                      </Select>
                     </div>
-
-                    {/* Message Area */}
-                    <div className="space-y-2">
-                      <Label htmlFor="message" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">YOUR VISION</Label>
-                      <textarea
-                        id="message" name="message" rows={4}
-                        placeholder="Tell us about the atmosphere, the aesthetic, and the experience you wish to create..."
-                        value={formData.message} onChange={handleInputChange}
-                        className="w-full bg-transparent border-0 border-b border-stone/50 px-0 py-3 text-charcoal font-light placeholder:text-stone focus:ring-0 focus:outline-none focus:border-terracotta resize-none shadow-none"
-                      />
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="pt-6">
-                      <Button
-                        type="submit" disabled={isLoading}
-                        className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 transition-colors font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs border-0"
-                      >
-                        {isLoading ? "Reviewing Application..." : "Submit Private Application"}
-                      </Button>
-                    </div>
-
-                    <p className="text-center text-sm text-muted-foreground pt-2">
-                      <span className="italic">Giorgia reviews all inquiries personally.</span>
-                    </p>
                   </div>
-                </motion.form>
-              ) : (
-                <motion.div
-                  key="success"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-background p-14 md:p-20 shadow-sm border border-border text-center h-full flex flex-col justify-center"
-                >
-                  <div className="w-20 h-20 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-8">
-                    <Check className="w-10 h-10 text-accent" />
+
+                  {/* Timeframe */}
+                  <div className="space-y-2">
+                    <Label htmlFor="eventDate" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">Preferred Timeframe</Label>
+                    <Input
+                      id="eventDate" name="eventDate" type="text" placeholder="Summer 2026 / Autumn 2027" value={formData.eventDate} onChange={handleInputChange}
+                      className="rounded-none border-0 border-b border-stone/50 bg-transparent px-0 h-12 focus-visible:ring-0 focus-visible:border-terracotta text-charcoal font-light shadow-none"
+                    />
                   </div>
-                  <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                    Application Received
-                  </h3>
-                  <p className="text-lg text-muted-foreground font-light mb-8 max-w-md mx-auto">
-                    Thank you for your interest. Giorgia will personally review your application and respond within 48-72 hours.
+
+                  {/* Message Area */}
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="text-[10px] tracking-[0.3em] uppercase text-olive font-medium">YOUR VISION</Label>
+                    <textarea
+                      id="message" name="message" rows={4}
+                      placeholder="Tell us about the atmosphere, the aesthetic, and the experience you wish to create..."
+                      value={formData.message} onChange={handleInputChange}
+                      className="w-full bg-transparent border-0 border-b border-stone/50 px-0 py-3 text-charcoal font-light placeholder:text-stone focus:ring-0 focus:outline-none focus:border-terracotta resize-none shadow-none"
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="pt-6">
+                    <Button
+                      type="submit" disabled={isLoading}
+                      className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 transition-colors font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs border-0"
+                    >
+                      {isLoading ? "Reviewing Application..." : "Submit Private Application"}
+                    </Button>
+                  </div>
+
+                  <p className="text-center text-sm text-muted-foreground pt-2">
+                    <span className="italic">Giorgia reviews all inquiries personally.</span>
                   </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </AnimatedSection>
-
-          {/* Direct Booking Column */}
-          <AnimatedSection delay={0.4} className="h-full">
-            <div className="bg-cream/40 p-10 md:p-14 border border-olive/10 h-full flex flex-col justify-center text-center">
-              <div className="inline-flex flex-col items-center gap-4 mb-8">
-                <div className="text-[10px] tracking-[0.4em] uppercase text-terracotta font-medium">
-                  Priority
                 </div>
+                </motion.form>
+            ) : (
+            <motion.div
+              key="success"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-background p-14 md:p-20 shadow-sm border border-border text-center h-full flex flex-col justify-center"
+            >
+              <div className="w-20 h-20 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-8">
+                <Check className="w-10 h-10 text-accent" />
               </div>
-              <h3 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">
-                Book a <span className="italic text-olive/80">Call Directly</span>
+              <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+                Application Received
               </h3>
-              <p className="text-base text-olive/70 font-light mb-10 max-w-sm mx-auto leading-relaxed">
-                Prefer an immediate conversation? Schedule a 30-minute discovery call with Giorgia to discuss your vision in detail.
+              <p className="text-lg text-muted-foreground font-light mb-8 max-w-md mx-auto">
+                Thank you for your interest. Giorgia will personally review your application and respond within 48-72 hours.
               </p>
-              <div className="pt-4">
-                <Button
-                  asChild
-                  className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
-                >
-                  <a href="https://calendly.com/boutiqueweddings/30min" target="_blank" rel="noopener noreferrer">
-                    Schedule Your Consultation
-                  </a>
-                </Button>
+            </motion.div>
+              )}
+          </AnimatePresence>
+        </AnimatedSection>
+
+        {/* Direct Booking Column */}
+        <AnimatedSection delay={0.4} className="h-full">
+          <div className="bg-cream/40 p-10 md:p-14 border border-olive/10 h-full flex flex-col justify-center text-center">
+            <div className="inline-flex flex-col items-center gap-4 mb-8">
+              <div className="text-[10px] tracking-[0.4em] uppercase text-terracotta font-medium">
+                Priority
               </div>
             </div>
-          </AnimatedSection>
-        </div>
+            <h3 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">
+              Book a <span className="italic text-olive/80">Call Directly</span>
+            </h3>
+            <p className="text-base text-olive/70 font-light mb-10 max-w-sm mx-auto leading-relaxed">
+              Prefer an immediate conversation? Schedule a 30-minute discovery call with Giorgia to discuss your vision in detail.
+            </p>
+            <div className="pt-4">
+              <Button
+                asChild
+                className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
+              >
+                <a href="https://calendly.com/boutiqueweddings/30min" target="_blank" rel="noopener noreferrer">
+                  Schedule Your Consultation
+                </a>
+              </Button>
+            </div>
+          </div>
+        </AnimatedSection>
       </div>
-    </section>
+    </div>
+    </section >
   )
 }
