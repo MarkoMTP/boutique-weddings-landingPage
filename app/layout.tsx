@@ -72,20 +72,39 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+      <head>
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/f890392b682a4ffd3384f184/script.js"
+          strategy="beforeInteractive"
+        />
+      </head>
+
       <body className="font-sans antialiased">
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18008017728"
+          src="https://www.googletagmanager.com/gtag/js?id=G-SQN00TY674"
         />
+
         <Script id="google-tag">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
 
-            gtag('config', 'AW-18008017728');
-          `}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-SQN00TY674');
+      gtag('config', 'AW-18008017728');
+    `}
         </Script>
+
         {children}
         <Analytics />
       </body>
