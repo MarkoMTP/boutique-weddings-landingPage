@@ -8,40 +8,20 @@ export default function ThankYou() {
   return (
     <>
       {/* Explicitly adding scripts to Thank You page per request */}
+      {/* Google Tags explicitly for Thank You page (Conversion Tracking) */}
       <Script
-        id="cookieyes-thankyou"
-        src="https://cdn-cookieyes.com/client_data/f890392b682a4ffd3384f184/script.js"
-        strategy="beforeInteractive"
-      />
-      
-      <Script
-        async
+        id="google-tag-manager"
         src="https://www.googletagmanager.com/gtag/js?id=G-SQN00TY674"
         strategy="afterInteractive"
       />
-
-      <Script id="google-tag-thankyou" strategy="afterInteractive">
+      <Script id="google-tag-thank-you" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-
-          // Default consent
-          gtag('consent', 'default', {
-            ad_storage: 'denied',
-            analytics_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied'
-          });
-
           gtag('js', new Date());
+
           gtag('config', 'G-SQN00TY674');
           gtag('config', 'AW-349113517');
-          
-
-          // Send a conversion event on thank you page view 
-          gtag('event', 'conversion', {
-              'send_to': 'AW-349113517/conversion_id_here' // Replace with your specific conversion ID/label if you have one
-          });
         `}
       </Script>
 
