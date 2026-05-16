@@ -74,6 +74,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+      <head>
+        <script src="https://cdn.cookiehub.eu/c2/89490170.js" />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+document.addEventListener("DOMContentLoaded", function(event) {
+var cpm = {};
+window.cookiehub.load(cpm);
+});
+`,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SQN00TY674"
