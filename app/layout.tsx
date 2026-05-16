@@ -75,18 +75,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
       <head>
-        <script src="https://cdn.cookiehub.eu/c2/89490170.js" />
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
+        <Script
+          src="https://cdn.cookiehub.eu/c2/89490170.js"
+          strategy="beforeInteractive"
+        />
+        <Script id="cookiehub-loader" strategy="beforeInteractive">
+          {`
 document.addEventListener("DOMContentLoaded", function(event) {
 var cpm = {};
 window.cookiehub.load(cpm);
 });
-`,
-          }}
-        />
+`}
+        </Script>
       </head>
       <body className="font-sans antialiased">
         <Script
@@ -99,12 +99,6 @@ window.cookiehub.load(cpm);
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
 
-      gtag('consent', 'default', {
-      analytics_storage: 'granted',
-      ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'granted'
-    });
 
         gtag('js', new Date());
 
