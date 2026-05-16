@@ -74,25 +74,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
-      <head></head>
-
       <body className="font-sans antialiased">
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-SQN00TY674"
+          strategy="afterInteractive"
         />
 
-        <Script id="google-tag">
+        <Script id="google-tag" strategy="afterInteractive">
           {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
 
+        gtag('js', new Date());
 
-      gtag('js', new Date());
-
-      gtag('config', 'G-SQN00TY674');
-      gtag('config', 'AW-349113517');
-    `}
+        gtag('config', 'G-SQN00TY674');
+        gtag('config', 'AW-349113517');
+      `}
         </Script>
 
         {children}
