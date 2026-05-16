@@ -54,7 +54,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -74,21 +73,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
-      <head>
+      <body className="font-sans antialiased">
+        {/* CookieHub */}
         <Script
           src="https://cdn.cookiehub.eu/c2/89490170.js"
           strategy="beforeInteractive"
         />
+
         <Script id="cookiehub-loader" strategy="beforeInteractive">
           {`
-document.addEventListener("DOMContentLoaded", function(event) {
-var cpm = {};
-window.cookiehub.load(cpm);
-});
-`}
+            window.addEventListener("load", function() {
+              var cpm = {};
+              if (window.cookiehub) {
+                window.cookiehub.load(cpm);
+              }
+            });
+          `}
         </Script>
-      </head>
-      <body className="font-sans antialiased">
+
+        {/* Google tag */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SQN00TY674"
           strategy="afterInteractive"
@@ -96,17 +99,14 @@ window.cookiehub.load(cpm);
 
         <Script id="google-tag" strategy="afterInteractive">
           {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
 
+            gtag('js', new Date());
 
-        gtag('js', new Date());
-
-          
-
-        gtag('config', 'G-SQN00TY674');
-        gtag('config', 'AW-349113517');
-      `}
+            gtag('config', 'G-SQN00TY674');
+            gtag('config', 'AW-349113517');
+          `}
         </Script>
 
         {children}
