@@ -1,29 +1,29 @@
-"use client"
+"use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 
 export function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.1])
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const contentY = useTransform(scrollYProgress, [0, 0.5], [0, -50])
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.5], [0, -50]);
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,7 +34,7 @@ export function Hero() {
         delayChildren: 0.4,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
@@ -46,7 +46,7 @@ export function Hero() {
         ease: [0.25, 0.1, 0.25, 1],
       },
     },
-  }
+  };
 
   const lineVariants = {
     hidden: { scaleX: 0 },
@@ -58,7 +58,7 @@ export function Hero() {
         delay: 0.8,
       },
     },
-  }
+  };
 
   return (
     <section
@@ -66,10 +66,7 @@ export function Hero() {
       className="relative h-screen min-h-[800px] flex items-end justify-start overflow-hidden pb-32 md:pb-24 bg-black"
     >
       {/* Background Image with Parallax */}
-      <motion.div
-        className="absolute inset-0"
-
-      >
+      <motion.div className="absolute inset-0">
         <Image
           src="/hero.jpg"
           alt="Candid moment of a luxury wedding couple"
@@ -94,9 +91,11 @@ export function Hero() {
         className="relative z-10 w-full px-6 max-w-7xl mx-auto flex flex-col items-start text-white"
       >
         {/* Decorative Line Left & Tagline */}
-        <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8">
+        <motion.div
+          variants={itemVariants}
+          className="flex items-center gap-4 mb-8"
+        >
           <div className="w-16 h-px bg-gold" />
-
         </motion.div>
 
         {/* Main Headline - Left Aligned, Dramatic */}
@@ -105,7 +104,6 @@ export function Hero() {
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.05] mb-8 text-balance max-w-5xl"
         >
           Luxury Wedding Planner Lake Como
-
         </motion.h1>
 
         <motion.div
@@ -117,7 +115,7 @@ export function Hero() {
               onClick={() => handleNavClick("#inquiry")}
               className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-black text-white hover:bg-black/80 transition-all duration-500 border-0"
             >
-              Book Your Private Consultation
+              Tell Us About Your Wedding
             </Button>
           </div>
 
@@ -137,7 +135,12 @@ export function Hero() {
         className="absolute bottom-12 right-12 hidden lg:flex flex-col items-center gap-4 text-white/60 hover:text-gold transition-colors group"
         aria-label="Scroll down"
       >
-        <span className="text-[10px] tracking-[0.4em] uppercase font-light" style={{ writingMode: 'vertical-rl' }}>Discover</span>
+        <span
+          className="text-[10px] tracking-[0.4em] uppercase font-light"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Discover
+        </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -145,5 +148,5 @@ export function Hero() {
         />
       </motion.button>
     </section>
-  )
+  );
 }
