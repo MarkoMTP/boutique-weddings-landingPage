@@ -110,9 +110,9 @@ export function Hero() {
           variants={itemVariants}
           className="max-w-2xl text-base md:text-lg text-white/85 font-light leading-relaxed"
         >
-          An exclusive wedding planner in Italy for international couples
-          seeking destination wedding planning that feels personal, precise, and
-          quietly extraordinary.
+          An exclusive destination wedding planner in Italy for international
+          couples seeking destination wedding planning that feels personal,
+          precise, and quietly extraordinary.
         </motion.p>
 
         <motion.div
