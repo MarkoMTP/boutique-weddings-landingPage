@@ -47,11 +47,11 @@ export function ProcessTimeline() {
         {/* Section Header */}
         <AnimatedSection className="mb-20 lg:mb-28">
           <p className="text-[10px] tracking-[0.4em] uppercase text-charcoal/50 mb-6 font-medium">
-            Our Full-Service Planning Experience
+            Our Full-Service Wedding Planning Lake Como Italy Experience
           </p>
 
           <h2 className="font-serif text-4xl md:text-6xl text-charcoal mb-8 leading-[1.05] max-w-4xl">
-            Lake Como Wedding Planning,{" "}
+            Wedding Planning Lake Como Italy,{" "}
             <span className="italic text-terracotta">
               Handled With Calm Precision
             </span>
@@ -68,8 +68,9 @@ export function ProcessTimeline() {
 
             <p className="text-base text-olive/75 font-light leading-relaxed max-w-md">
               You receive more than planning support. You receive a clear path,
-              a trusted team, and the peace of mind that every detail is being
-              thoughtfully managed on your behalf.
+              a trusted wedding organiser Lake Como couples can rely on, and
+              the peace of mind that every detail is being thoughtfully managed
+              on your behalf.
             </p>
           </div>
         </AnimatedSection>

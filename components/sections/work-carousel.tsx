@@ -57,12 +57,20 @@ const testimonials = [
   },
 ];
 
+const workAltPhrases = [
+  "luxury wedding planner Italy portfolio moment",
+  "Lake Como wedding planner celebration detail",
+  "Italian villa wedding planner reception design",
+  "Villa Balbianello wedding inspiration",
+  "destination wedding planner Lake Como portfolio moment",
+];
+
 const workImages = Array.from({ length: 30 }, (_, index) => {
   const number = String(index + 1).padStart(2, "0");
 
   return {
     src: `/work/work-${number}.jpg`,
-    alt: `Boutique Weddings portfolio moment ${number}`,
+    alt: `${workAltPhrases[index % workAltPhrases.length]} ${number}`,
   };
 });
 
@@ -84,7 +92,8 @@ export function WorkCarousel() {
               <div className="w-16 h-px bg-stone mb-8" />
               <p className="text-lg text-olive/90 font-light max-w-xl leading-relaxed">
                 A glimpse into the celebrations, settings, and intimate details
-                we have had the honor of shaping for our couples.
+                we have had the honor of shaping as a wedding planner Lake Como
+                couples trust for refined, personal celebrations.
               </p>
             </div>
 

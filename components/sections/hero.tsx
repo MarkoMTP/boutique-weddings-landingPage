@@ -103,8 +103,17 @@ export function Hero() {
           variants={itemVariants}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.05] mb-8 text-balance max-w-5xl"
         >
-          Luxury Destination Wedding Planner Lake Como
+          Luxury Wedding Planner Lake Como
         </motion.h1>
+
+        <motion.p
+          variants={itemVariants}
+          className="max-w-2xl text-base md:text-lg text-white/85 font-light leading-relaxed"
+        >
+          An exclusive wedding planner in Italy for international couples
+          seeking destination wedding planning that feels personal, precise, and
+          quietly extraordinary.
+        </motion.p>
 
         <motion.div
           variants={itemVariants}

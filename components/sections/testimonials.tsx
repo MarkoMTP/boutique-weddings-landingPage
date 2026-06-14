@@ -91,7 +91,8 @@ export function Testimonials() {
           <div className="w-16 h-px bg-stone mb-8" />
           <p className="text-lg text-olive/90 font-light max-w-xl leading-relaxed">
             Planning a destination wedding from abroad requires trust. These are
-            the words of couples who placed their celebration in our hands.
+            the words of couples who placed their celebration in the hands of a
+            destination wedding planner in Italy with deep Lake Como experience.
           </p>
         </AnimatedSection>
 
@@ -152,7 +153,7 @@ export function Testimonials() {
             <span className="italic text-terracotta">that feels effortless?</span>
           </p>
           <a
-            href="#contact"
+            href="#inquiry"
             className="inline-flex items-center gap-4 text-[10px] tracking-[0.3em] uppercase text-charcoal hover:text-terracotta transition-colors group mx-auto"
           >
             <span>Book Your Private Consultation</span>

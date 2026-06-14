@@ -1,46 +1,34 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react"
-import { AnimatedSection } from "@/components/shared/animated-section"
-
-const galleryImages = [
-  { src: "/images/gallery/silk-ribbons.jpg", alt: "Luxury silk ribbons" },
-  { src: "/images/gallery/vintage-alfa.jpg", alt: "Vintage Alfa Romeo" },
-  { src: "/images/gallery/limestone-wall.jpg", alt: "Limestone wall texture" },
-  { src: "/images/gallery/olive-grove.jpg", alt: "Tuscan olive grove" },
-  { src: "/images/gallery/table-setting.jpg", alt: "Elegant table setting" },
-]
+import Image from "next/image";
+import Link from "next/link";
+import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
   experience: [
     { label: "Lake Como", href: "#destinations" },
     { label: "Our Process", href: "#process" },
-    { label: "Services", href: "#commissions" },
+    { label: "Our Work", href: "#work" },
     { label: "About Giorgia", href: "#about" },
   ],
   connect: [
     { label: "Request Consultation", href: "#inquiry" },
-    { label: "Testimonials", href: "#testimonials" },
     { label: "FAQ", href: "#faq" },
   ],
-}
+};
 
 export function Footer() {
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <footer className="bg-charcoal text-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 border-b border-cream/10 pb-20">
-
           {/* Brand Column */}
           <div className="lg:col-span-5">
             <Link href="/" className="relative inline-block mb-8 group">
@@ -54,8 +42,9 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-cream/70 font-light leading-relaxed max-w-sm mb-10 text-sm md:text-base">
-              Luxury Lake Como wedding planning, crafted with heart, precision,
-              and complete dedication — since 2007.
+              Luxury wedding planner Lake Como and destination wedding planner
+              Italy services, crafted with heart, precision, and complete
+              dedication — since 2007.
             </p>
 
             {/* Social Links */}
@@ -136,11 +125,22 @@ export function Footer() {
         {/* Bottom Bar Info */}
         <div className="pt-8 pb-16 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-cream/40 text-[10px] uppercase tracking-[0.2em] font-medium">
-            &copy; {new Date().getFullYear()} Boutique Weddings. All rights reserved.
+            &copy; {new Date().getFullYear()} Boutique Weddings. All rights
+            reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-cream/40 hover:text-cream/80 text-[10px] tracking-[0.2em] uppercase transition-colors">Privacy</a>
-            <a href="#" className="text-cream/40 hover:text-cream/80 text-[10px] tracking-[0.2em] uppercase transition-colors">Terms</a>
+            <a
+              href="#"
+              className="text-cream/40 hover:text-cream/80 text-[10px] tracking-[0.2em] uppercase transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="#"
+              className="text-cream/40 hover:text-cream/80 text-[10px] tracking-[0.2em] uppercase transition-colors"
+            >
+              Terms
+            </a>
           </div>
         </div>
       </div>
@@ -152,5 +152,5 @@ export function Footer() {
         </h2>
       </div>
     </footer>
-  )
+  );
 }

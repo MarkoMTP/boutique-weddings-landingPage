@@ -11,7 +11,7 @@ const packages = [
     name: "Multi-Day",
     tagline: "The Ultimate Experience",
     price: "Fixed Fee",
-    description: "An immersive, fully bespoke experience orchestrated over multiple days. From the moment your guests arrive in Italy to their final farewell, every detail is flawlessly curated, designed, and executed.",
+    description: "An immersive, fully bespoke experience for couples seeking a luxury wedding planner Lake Como can trust over multiple days. From the moment your guests arrive in Italy to their final farewell, every detail is flawlessly curated, designed, and executed.",
     features: [
       "Comprehensive design, styling, and creative direction",
       "Sourcing and booking of elite Lake Como venues",
@@ -122,7 +122,7 @@ export function Commissions() {
           </h2>
           <div className="h-px w-16 bg-gold/40 mb-8" />
           <p className="text-lg text-cream/70 font-light leading-relaxed mb-12 lg:mb-16">
-            We believe luxury begins with profound trust. Our comprehensive service is designed to provide exceptional value while ensuring every detail receives the obsessive attention it deserves.
+            We believe luxury begins with profound trust. As a luxury wedding planner in Italy focused on Lake Como, our comprehensive service is designed to provide exceptional value while ensuring every detail receives the obsessive attention it deserves.
           </p>
 
           <div className="bg-charcoal/40 border border-cream/10 p-8 rounded-sm text-left">

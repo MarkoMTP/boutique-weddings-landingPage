@@ -8,7 +8,7 @@ const features = [
     number: "01",
     title: "Historic Private Villas",
     description:
-      "Celebrate in legendary lakefront estates with manicured gardens, panoramic terraces, and centuries of charm.",
+      "Celebrate in legendary lakefront estates with an Italian villa wedding planner who understands manicured gardens, panoramic terraces, and centuries of charm.",
   },
   {
     number: "02",
@@ -51,14 +51,14 @@ export function Destinations() {
               <div className="w-16 h-px bg-stone mb-10" />
 
               <p className="text-lg text-olive/90 font-light leading-relaxed mb-6 italic">
-                Lake Como is not simply a location — it is the atmosphere, elegance, and emotion that shape the entire wedding experience.
+                Lake Como is not simply a location — it is the atmosphere, elegance, and emotion that shape the entire wedding experience for couples beginning wedding planning Lake Como.
               </p>
               <p className="text-sm md:text-base text-olive/80 font-light leading-relaxed mb-12">
-                Surrounded by dramatic mountains, shimmering waters, historic villas, and timeless Italian charm, Lake Como has become one of the world's most desired wedding destinations for couples seeking a celebration that feels both iconic and deeply intimate.
+                Surrounded by dramatic mountains, shimmering waters, historic villas, and timeless Italian charm, Lake Como has become one of the world's most desired wedding destinations for couples seeking a destination wedding planner Lake Como can trust with a celebration that feels both iconic and deeply intimate.
               </p>
 
               <a
-                href="#contact"
+                href="#inquiry"
                 className="inline-flex items-center gap-4 text-[10px] tracking-[0.3em] uppercase text-charcoal hover:text-terracotta transition-colors group"
               >
                 <span>Begin Your Lake Como Journey</span>
@@ -76,7 +76,7 @@ export function Destinations() {
               <AnimatedSection direction="up" delay={0.2} className="absolute right-0 top-0 w-[80%] h-[85%] z-20 overflow-hidden shadow-2xl">
                 <Image
                   src="/dest 2.jpg"
-                  alt="Lake Como wedding venue"
+                  alt="Italian villa wedding planner venue on Lake Como"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -87,7 +87,7 @@ export function Destinations() {
               <AnimatedSection direction="left" delay={0.4} className="absolute left-0 bottom-[10%] w-[45%] aspect-square z-30 overflow-hidden shadow-xl border-4 border-sand hidden md:block">
                 <Image
                   src="/dest1.jpg"
-                  alt="Italian elegant details"
+                  alt="Italian villa wedding planner details"
                   fill
                   className="object-cover"
                   sizes="25vw"
@@ -98,7 +98,7 @@ export function Destinations() {
               <AnimatedSection direction="down" delay={0.1} className="absolute top-[10%] left-[10%] w-[35%] h-[30%] z-10 overflow-hidden opacity-50 mix-blend-multiply hidden lg:block">
                 <Image
                   src="/dest3.jpg"
-                  alt="Lake view terrace"
+                  alt="Lake Como wedding planning terrace"
                   fill
                   className="object-cover"
                   sizes="20vw"

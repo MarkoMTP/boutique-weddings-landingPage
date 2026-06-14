@@ -112,8 +112,9 @@ export function InquiryForm() {
           </h2>
           <div className="w-16 h-px bg-stone mx-auto mb-8" />
           <p className="text-lg text-olive/80 font-light max-w-xl mx-auto italic">
-            Begin the conversation about your extraordinary celebration. Giorgia
-            reviews all inquiries personally.
+            Begin the conversation about your extraordinary celebration with a
+            destination wedding planner in Italy. Giorgia reviews all inquiries
+            personally.
           </p>
         </AnimatedSection>
 
@@ -132,7 +133,8 @@ export function InquiryForm() {
               </h3>
               <p className="text-base text-olive/70 font-light mb-10 max-w-sm mx-auto leading-relaxed">
                 Prefer an immediate conversation? Schedule a 30-minute discovery
-                call with Giorgia to discuss your vision in detail.
+                call with Giorgia to discuss your Lake Como wedding planning
+                vision in detail.
               </p>
               <div className="pt-4">
                 <Button

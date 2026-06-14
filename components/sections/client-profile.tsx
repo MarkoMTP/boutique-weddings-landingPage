@@ -6,7 +6,7 @@ import { AnimatedSection } from "@/components/shared/animated-section";
 const profilePoints = [
   {
     title: "Planning From Abroad",
-    body: "You want a trusted team on Lake Como who can guide venues, vendors, logistics, and guest experience with calm precision.",
+    body: "You want a trusted wedding planner in Lake Como, Italy who can guide venues, vendors, logistics, and guest experience with calm precision.",
   },
   {
     title: "Full-Service Support",
@@ -14,7 +14,7 @@ const profilePoints = [
   },
   {
     title: "Refined, Personal Design",
-    body: "You want a wedding that feels elegant and considered, but still deeply personal to your story, style, and guests.",
+    body: "You want guidance from wedding planners in Italy who understand refined design, local culture, and the details that make a celebration feel personal.",
   },
   {
     title: "A Luxury-Level Investment",
@@ -61,7 +61,8 @@ export function ClientProfile() {
             <p className="text-olive/85 font-light text-base md:text-lg leading-relaxed mb-8">
               We work with a limited number of international couples who want
               full-service planning, calm guidance, and a celebration that feels
-              elegant, personal, and beautifully executed.
+              elegant, personal, and beautifully executed by a Como, Italy
+              wedding planner with deep local knowledge.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 border-t border-stone/30 pt-8">

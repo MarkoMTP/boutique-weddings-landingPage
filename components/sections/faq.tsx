@@ -11,6 +11,23 @@ import Image from "next/image";
 
 const categories = [
   {
+    label: "Lake Como & Venues",
+    items: [
+      {
+        q: "How much is it to get married at Lake Como?",
+        a: "Most of our Lake Como weddings begin with an overall investment of €80,000+, depending on venue, guest count, season, design scope, guest logistics, and the number of events involved. We guide each couple through a realistic budget framework before confirming the planning direction.",
+      },
+      {
+        q: "Can you plan a Villa Balbianello wedding?",
+        a: "Yes. A Villa Balbianello wedding requires careful coordination around availability, guest movement, boat transfers, supplier timing, and venue rules. We help couples understand what is possible and shape the experience with the precision this iconic Lake Como villa deserves.",
+      },
+      {
+        q: "How do we choose a destination wedding planner in Italy?",
+        a: "Look for a planner with proven Lake Como experience, strong local supplier relationships, bilingual communication, transparent planning systems, and the ability to manage guest logistics from abroad. If you are searching for a Como Italy wedding planner, we recommend choosing a team that works selectively and understands both luxury service and Italian hospitality.",
+      },
+    ],
+  },
+  {
     label: "Communication",
     items: [
       {
@@ -41,7 +58,7 @@ const categories = [
       },
       {
         q: "Do you help with venue selection?",
-        a: "Absolutely. We guide you through selecting the ideal Lake Como venue based on your guest count, style, priorities, and overall vision.",
+        a: "Absolutely. As a wedding planner Lake Como Italy couples trust, we guide you through selecting the ideal venue based on your guest count, style, priorities, and overall vision.",
       },
     ],
   },
@@ -86,7 +103,8 @@ export function FAQ() {
                 Planning a destination wedding in Lake Como should feel exciting
                 — not overwhelming. We've answered some of the most common
                 questions couples ask before beginning their Lake Como journey
-                with us.
+                with us, from wedding planning Lake Como Italy to guest
+                logistics and venue decisions.
               </p>
               <p className="text-sm text-olive/70 font-light leading-relaxed italic max-w-sm">
                 We understand how important it is to trust the team guiding one
@@ -112,7 +130,7 @@ export function FAQ() {
               {/* User instructions: Add your next/image here */}
               <Image
                 src="/faq1.jpg"
-                alt="FAQ Image 1"
+                alt="FAQ about wedding planning Lake Como Italy"
                 fill
                 className="object-cover"
               />
@@ -127,7 +145,7 @@ export function FAQ() {
               </div>
               <Image
                 src="/faq2.jpg"
-                alt="FAQ Image 1"
+                alt="Lake Como wedding organiser answers"
                 fill
                 className="object-cover"
               />

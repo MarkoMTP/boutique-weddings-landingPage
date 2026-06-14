@@ -81,6 +81,9 @@ export function EditorialSpotlight() {
                 <p>
                   As interest grew, I watched the industry shift toward volume. But I saw an opportunity to build something different: a boutique agency rooted in elegance, sincere personal relationships, and truly bespoke service.
                 </p>
+                <p>
+                  For couples comparing the best wedding planners in Italy, our work is intentionally selective: fewer celebrations, deeper attention, and a trusted local network shaped over years on Lake Como.
+                </p>
                 <p className="font-serif text-xl italic text-sand pt-4">
                   "Lake Como never lost its magic. We ensure your wedding won't either."
                 </p>
