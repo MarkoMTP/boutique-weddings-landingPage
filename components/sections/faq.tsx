@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
-import { AnimatedSection } from "@/components/shared/animated-section"
-import Image from "next/image"
+} from "@/components/ui/accordion";
+import { AnimatedSection } from "@/components/shared/animated-section";
+import Image from "next/image";
 
 const categories = [
   {
@@ -17,7 +17,6 @@ const categories = [
         q: "How will we communicate throughout the planning process?",
         a: "We stay in regular contact via email, zoom meetings and are also available by phone whenever needed. Clear, timely communication is one of the foundations of our service.",
       },
-
 
       {
         q: "How do you manage time zone differences?",
@@ -47,7 +46,6 @@ const categories = [
     ],
   },
 
-
   {
     label: "Timelines",
     items: [
@@ -65,16 +63,14 @@ const categories = [
       },
     ],
   },
-]
+];
 
 export function FAQ() {
   return (
     <section id="faq" className="py-24 lg:py-20 bg-cream relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-
         {/* Editorial Section Header with Picture Frames */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-24 lg:mb-32">
-
           <AnimatedSection className="lg:col-span-6 flex flex-col justify-center">
             <p className="text-[10px] tracking-[0.4em] uppercase text-olive mb-6 font-medium">
               FAQ
@@ -87,44 +83,66 @@ export function FAQ() {
             <div className="w-24 h-px bg-stone mb-10" />
             <div className="flex flex-col gap-8">
               <p className="text-lg text-olive/90 font-light leading-relaxed max-w-lg">
-                Planning a destination wedding should feel exciting — not overwhelming. We've answered some of the most common questions couples ask before beginning their Lake Como journey with us.
+                Planning a destination wedding in Lake Como should feel exciting
+                — not overwhelming. We've answered some of the most common
+                questions couples ask before beginning their Lake Como journey
+                with us.
               </p>
               <p className="text-sm text-olive/70 font-light leading-relaxed italic max-w-sm">
-                We understand how important it is to trust the team guiding one of the most meaningful days of your life. Our role is to make the process clear, calm, and beautifully organised from the very beginning.
+                We understand how important it is to trust the team guiding one
+                of the most meaningful days of your life. Our role is to make
+                the process clear, calm, and beautifully organised from the very
+                beginning.
               </p>
             </div>
           </AnimatedSection>
 
           {/* Picture Frames Collage */}
-          <AnimatedSection delay={0.2} className="lg:col-span-6 relative h-[400px] lg:h-[600px] w-full mt-10 lg:mt-0">
-
+          <AnimatedSection
+            delay={0.2}
+            className="lg:col-span-6 relative h-[400px] lg:h-[600px] w-full mt-10 lg:mt-0"
+          >
             {/* Frame 1: Tall Portrait */}
             <div className="absolute right-0 top-0 w-[55%] lg:w-[50%] aspect-[3/4] bg-stone/20 border border-stone/30 flex items-center justify-center overflow-hidden group">
               <div className="absolute inset-x-0 bottom-4 text-center">
-                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/40 font-medium">Image Placeholder</span>
+                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/40 font-medium">
+                  Image Placeholder
+                </span>
               </div>
               {/* User instructions: Add your next/image here */}
-              <Image src="/faq1.jpg" alt="FAQ Image 1" fill className="object-cover" />
+              <Image
+                src="/faq1.jpg"
+                alt="FAQ Image 1"
+                fill
+                className="object-cover"
+              />
             </div>
 
             {/* Frame 2: Wide Landscape Overlapping */}
             <div className="absolute left-0 lg:left-8 bottom-0 lg:bottom-16 w-[65%] lg:w-[60%] aspect-[4/3] bg-sand/50 border border-stone/40 shadow-2xl flex items-center justify-center overflow-hidden z-10 group">
               <div className="absolute inset-x-0 bottom-4 text-center">
-                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/60 font-medium">Image Placeholder</span>
+                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/60 font-medium">
+                  Image Placeholder
+                </span>
               </div>
-              <Image src="/faq2.jpg" alt="FAQ Image 1" fill className="object-cover" />
-
-
+              <Image
+                src="/faq2.jpg"
+                alt="FAQ Image 1"
+                fill
+                className="object-cover"
+              />
             </div>
-
           </AnimatedSection>
         </div>
 
         {/* Minimalist Index Accordions */}
         <div className="border-t border-stone/50">
           {categories.map((category, ci) => (
-            <AnimatedSection key={ci} delay={ci * 0.08} className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 py-10 border-b border-stone/50 items-start">
-
+            <AnimatedSection
+              key={ci}
+              delay={ci * 0.08}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 py-10 border-b border-stone/50 items-start"
+            >
               {/* Left Column Label */}
               <div className="lg:col-span-3 pt-4">
                 <span className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-medium block">
@@ -151,13 +169,10 @@ export function FAQ() {
                   ))}
                 </Accordion>
               </div>
-
             </AnimatedSection>
           ))}
         </div>
-
-
       </div>
     </section>
-  )
+  );
 }

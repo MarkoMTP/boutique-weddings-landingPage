@@ -103,7 +103,7 @@ export function Hero() {
           variants={itemVariants}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.05] mb-8 text-balance max-w-5xl"
         >
-          Luxury Wedding Planner Lake Como
+          Luxury Destination Wedding Planner Lake Como
         </motion.h1>
 
         <motion.div
