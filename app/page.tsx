@@ -3,8 +3,10 @@ import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { PressMarquee } from "@/components/sections/press-marquee";
 import { ClientProfile } from "@/components/sections/client-profile";
+import { WhyUs } from "@/components/sections/why-us";
 import { EditorialSpotlight } from "@/components/sections/editorial-spotlight";
 import { Destinations } from "@/components/sections/destinations";
+import { IconicVillas } from "@/components/sections/iconic-villas";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { WorkCarousel } from "@/components/sections/work-carousel";
 import { FAQ } from "@/components/sections/faq";
@@ -19,8 +21,11 @@ export default function Home() {
         <PressMarquee />
         <ClientProfile />
         <Destinations />
+        <IconicVillas />
         <ProcessTimeline />
         <EditorialSpotlight />
+        <WhyUs />
+
         <WorkCarousel />
         <FAQ />
         <InquiryForm />

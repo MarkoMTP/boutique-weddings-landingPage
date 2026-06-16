@@ -7,189 +7,77 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { AnimatedSection } from "@/components/shared/animated-section";
-import Image from "next/image";
 
-const categories = [
+const faqs = [
   {
-    label: "Lake Como & Venues",
-    items: [
-      {
-        q: "How much is it to get married at Lake Como?",
-        a: "Most of our Lake Como weddings begin with an overall investment of €80,000+, depending on venue, guest count, season, design scope, guest logistics, and the number of events involved. We guide each couple through a realistic budget framework before confirming the planning direction.",
-      },
-      {
-        q: "Can you plan a Villa Balbianello wedding?",
-        a: "Yes. A Villa Balbianello wedding requires careful coordination around availability, guest movement, boat transfers, supplier timing, and venue rules. We help couples understand what is possible and shape the experience with the precision this iconic Lake Como villa deserves.",
-      },
-      {
-        q: "How do we choose a destination wedding planner in Italy?",
-        a: "Look for a planner with proven Lake Como experience, strong local supplier relationships, bilingual communication, transparent planning systems, and the ability to manage guest logistics from abroad. If you are searching for a Como Italy wedding planner, we recommend choosing a team that works selectively and understands both luxury service and Italian hospitality.",
-      },
-    ],
+    q: "What investment should we expect for Lake Como?",
+    a: "Most of our Lake Como weddings begin with an overall investment of €80,000+, depending on venue, guest count, season, design scope, guest logistics, and the number of events involved.",
   },
   {
-    label: "Communication",
-    items: [
-      {
-        q: "How will we communicate throughout the planning process?",
-        a: "We stay in regular contact via email, zoom meetings and are also available by phone whenever needed. Clear, timely communication is one of the foundations of our service.",
-      },
-
-      {
-        q: "How do you manage time zone differences?",
-        a: "We regularly work with international couples and understand the realities of different time zones. We do our best to respond quickly and efficiently, regardless of where you are based.",
-      },
-      {
-        q: "Do you offer multilingual support?",
-        a: "Yes. We are fully bilingual in Italian and English, and additional multilingual support can be arranged when required.",
-      },
-    ],
+    q: "Can you help us choose the right villa?",
+    a: "Yes. We guide venue selection around guest count, budget, style, logistics, availability, and the kind of guest experience you want to create.",
   },
   {
-    label: "Service & Concierge",
-    items: [
-      {
-        q: "Do you only plan large weddings?",
-        a: "Not at all. We expertly plan weddings of many sizes — from intimate celebrations to larger multi-day destination events.",
-      },
-      {
-        q: "Can you assist with guest logistics and travel?",
-        a: "Yes. We can support with transfers, private drivers, boat arrangements, guest movement, and other concierge details that help create a seamless guest experience.",
-      },
-      {
-        q: "Do you help with venue selection?",
-        a: "Absolutely. As a wedding planner Lake Como Italy couples trust, we guide you through selecting the ideal venue based on your guest count, style, priorities, and overall vision.",
-      },
-    ],
+    q: "Do you work with couples planning from abroad?",
+    a: "Absolutely. Most of our couples are international, so communication, time zones, guest logistics, and remote decision-making are built into our planning process.",
   },
-
   {
-    label: "Timelines",
-    items: [
-      {
-        q: "How do you create a smooth wedding timeline?",
-        a: "We begin with an initial framework and refine it as details are confirmed. Closer to the wedding, we produce a comprehensive final schedule for you, the venue, and every supplier involved.",
-      },
-      {
-        q: "How early should we begin planning?",
-        a: "Ideally, 12–18 months in advance, especially for highly sought-after Lake Como venues and prime dates.",
-      },
-      {
-        q: "What happens on the wedding day?",
-        a: "We oversee the entire schedule, coordinate every supplier, manage logistics discreetly, and ensure the day unfolds beautifully so you can be fully present.",
-      },
-    ],
+    q: "Can you manage guest logistics and travel?",
+    a: "Yes. We can support transfers, boats, drivers, guest movement, welcome events, and the concierge details that make a destination wedding feel seamless.",
+  },
+  {
+    q: "How early should we begin planning?",
+    a: "Ideally 12-18 months in advance, especially for highly requested Lake Como villas and prime dates.",
+  },
+  {
+    q: "What happens on the wedding day?",
+    a: "We oversee the schedule, suppliers, logistics, guest flow, and contingency plans so you can stay fully present.",
   },
 ];
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 lg:py-20 bg-cream relative">
+    <section id="faq" className="py-20 lg:py-24 bg-sand/50 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Editorial Section Header with Picture Frames */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 mb-24 lg:mb-32">
-          <AnimatedSection className="lg:col-span-6 flex flex-col justify-center">
+        <AnimatedSection className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-4">
             <p className="text-[10px] tracking-[0.4em] uppercase text-olive mb-6 font-medium">
               FAQ
             </p>
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal mb-8 leading-[1.05]">
-              Everything You May
-              <br />
-              <span className="italic text-terracotta">Be Wondering</span>
+            <h2 className="font-serif text-4xl md:text-6xl text-charcoal mb-8 leading-[1.05]">
+              Essential questions,{" "}
+              <span className="italic text-terracotta">answered simply</span>
             </h2>
-            <div className="w-24 h-px bg-stone mb-10" />
-            <div className="flex flex-col gap-8">
-              <p className="text-lg text-olive/90 font-light leading-relaxed max-w-lg">
-                Planning a destination wedding in Lake Como should feel exciting
-                — not overwhelming. We've answered some of the most common
-                questions couples ask before beginning their Lake Como journey
-                with us, from wedding planning Lake Como Italy to guest
-                logistics and venue decisions.
-              </p>
-              <p className="text-sm text-olive/70 font-light leading-relaxed italic max-w-sm">
-                We understand how important it is to trust the team guiding one
-                of the most meaningful days of your life. Our role is to make
-                the process clear, calm, and beautifully organised from the very
-                beginning.
-              </p>
-            </div>
-          </AnimatedSection>
+            <div className="w-16 h-px bg-stone mb-8" />
+            <p className="text-base md:text-lg text-olive/85 font-light leading-relaxed max-w-md">
+              The questions couples most often ask before beginning a Lake Como
+              wedding with us.
+            </p>
+          </div>
 
-          {/* Picture Frames Collage */}
-          <AnimatedSection
-            delay={0.2}
-            className="lg:col-span-6 relative h-[400px] lg:h-[600px] w-full mt-10 lg:mt-0"
-          >
-            {/* Frame 1: Tall Portrait */}
-            <div className="absolute right-0 top-0 w-[55%] lg:w-[50%] aspect-[3/4] bg-stone/20 border border-stone/30 flex items-center justify-center overflow-hidden group">
-              <div className="absolute inset-x-0 bottom-4 text-center">
-                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/40 font-medium">
-                  Image Placeholder
-                </span>
-              </div>
-              {/* User instructions: Add your next/image here */}
-              <Image
-                src="/faq1.jpg"
-                alt="FAQ about wedding planning Lake Como Italy"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Frame 2: Wide Landscape Overlapping */}
-            <div className="absolute left-0 lg:left-8 bottom-0 lg:bottom-16 w-[65%] lg:w-[60%] aspect-[4/3] bg-sand/50 border border-stone/40 shadow-2xl flex items-center justify-center overflow-hidden z-10 group">
-              <div className="absolute inset-x-0 bottom-4 text-center">
-                <span className="text-[9px] tracking-[0.2em] uppercase text-olive/60 font-medium">
-                  Image Placeholder
-                </span>
-              </div>
-              <Image
-                src="/faq2.jpg"
-                alt="Lake Como wedding organiser answers"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </AnimatedSection>
-        </div>
-
-        {/* Minimalist Index Accordions */}
-        <div className="border-t border-stone/50">
-          {categories.map((category, ci) => (
-            <AnimatedSection
-              key={ci}
-              delay={ci * 0.08}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 py-10 border-b border-stone/50 items-start"
+          <div className="lg:col-span-8">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full border-t border-stone/50"
             >
-              {/* Left Column Label */}
-              <div className="lg:col-span-3 pt-4">
-                <span className="text-[10px] tracking-[0.3em] uppercase text-terracotta font-medium block">
-                  {category.label}
-                </span>
-              </div>
-
-              {/* Right Column Accordion */}
-              <div className="lg:col-span-9 w-full">
-                <Accordion type="single" collapsible className="w-full">
-                  {category.items.map((item, ii) => (
-                    <AccordionItem
-                      key={ii}
-                      value={`${ci}-${ii}`}
-                      className="border-b border-stone/30 last:border-0"
-                    >
-                      <AccordionTrigger className="font-serif text-2xl md:text-3xl text-charcoal hover:text-terracotta hover:no-underline transition-colors duration-300 text-left py-6 leading-tight">
-                        {item.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-olive/80 font-light leading-relaxed text-base pb-8 pr-12">
-                        {item.a}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
+              {faqs.map((item, index) => (
+                <AccordionItem
+                  key={item.q}
+                  value={`faq-${index}`}
+                  className="border-b border-stone/50"
+                >
+                  <AccordionTrigger className="font-serif text-2xl md:text-3xl text-charcoal hover:text-terracotta hover:no-underline transition-colors duration-300 text-left py-6 leading-tight">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-olive/80 font-light leading-relaxed text-base pb-7 pr-6 md:pr-16">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

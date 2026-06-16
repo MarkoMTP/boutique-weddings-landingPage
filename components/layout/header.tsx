@@ -10,6 +10,7 @@ import Image from "next/image";
 const navItems = [
   { label: "Profile", href: "#profile" },
   { label: "Lake Como", href: "#destinations" },
+  { label: "Villas", href: "#villas" },
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Our Work", href: "#work" },

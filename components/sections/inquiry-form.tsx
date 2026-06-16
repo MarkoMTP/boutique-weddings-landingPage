@@ -92,7 +92,7 @@ export function InquiryForm() {
   };
 
   return (
-    <section id="inquiry" className="py-32 lg:py-48 bg-sand text-charcoal">
+    <section id="inquiry" className="py-32 lg:py-48 bg-cream text-charcoal">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-20 lg:mb-24">
@@ -121,7 +121,7 @@ export function InquiryForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Direct Booking Column */}
           <AnimatedSection delay={0.4} className="h-full">
-            <div className="bg-cream/40 p-10 md:p-14 border border-olive/10 h-full flex flex-col justify-center text-center">
+            <div className="bg-sand/50 p-10 md:p-14 border border-stone/30 h-full flex flex-col justify-center text-center">
               <div className="inline-flex flex-col items-center gap-4 mb-8">
                 <div className="text-[10px] tracking-[0.4em] uppercase text-terracotta font-medium">
                   Priority
@@ -139,7 +139,7 @@ export function InquiryForm() {
               <div className="pt-4">
                 <Button
                   asChild
-                  className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
+                  className="w-full rounded-none py-8 bg-charcoal text-cream hover:bg-charcoal/85 font-medium tracking-[0.2em] uppercase text-[10px] transition-all duration-500 border-0"
                 >
                   <a
                     href="https://calendly.com/boutique-weddings-info/30min"
@@ -162,7 +162,7 @@ export function InquiryForm() {
                   initial={{ opacity: 1 }}
                   exit={{ opacity: 0, y: -20 }}
                   onSubmit={handleSubmit}
-                  className="bg-cream p-10 md:p-14 lg:p-16 border border-stone/30 shadow-2xl shadow-charcoal/5"
+                  className="bg-white p-10 md:p-14 lg:p-16 border border-stone/30 shadow-2xl shadow-charcoal/5"
                 >
                   <div className="space-y-10">
                     {/* Name Row */}
@@ -316,7 +316,7 @@ export function InquiryForm() {
                       <Button
                         type="submit"
                         disabled={isLoading}
-                        className="w-full rounded-none py-8 bg-black text-white hover:bg-black/80 transition-colors font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs border-0"
+                        className="w-full rounded-none py-8 bg-charcoal text-cream hover:bg-charcoal/85 transition-colors font-medium tracking-[0.2em] uppercase text-[10px] md:text-xs border-0"
                       >
                         {isLoading
                           ? "Reviewing Application..."

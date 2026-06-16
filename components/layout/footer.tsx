@@ -7,6 +7,7 @@ import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react";
 const footerLinks = {
   experience: [
     { label: "Lake Como", href: "#destinations" },
+    { label: "Villas", href: "#villas" },
     { label: "Our Process", href: "#process" },
     { label: "Our Work", href: "#work" },
     { label: "About Giorgia", href: "#about" },

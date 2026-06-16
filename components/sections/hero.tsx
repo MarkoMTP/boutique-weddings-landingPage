@@ -103,16 +103,16 @@ export function Hero() {
           variants={itemVariants}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-normal leading-[1.05] mb-8 text-balance max-w-5xl"
         >
-          Luxury Wedding Planner Lake Como
+          Wedding Planner Lake Como
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="max-w-2xl text-base md:text-lg text-white/85 font-light leading-relaxed"
         >
-          An exclusive destination wedding planner in Italy for international
-          couples seeking destination wedding planning that feels personal,
-          precise, and quietly extraordinary.
+          Bespoke celebrations for US couples in Lake Como's most beautiful
+          venues. Villa Balbiano, Villa Erba, Villa Pliniana, Hotel Tremezzo and
+          more.
         </motion.p>
 
         <motion.div
@@ -122,7 +122,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <Button
               onClick={() => handleNavClick("#inquiry")}
-              className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-black text-white hover:bg-black/80 transition-all duration-500 border-0"
+              className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-charcoal text-cream hover:bg-charcoal/85 transition-all duration-500 border-0"
             >
               Tell Us About Your Wedding
             </Button>

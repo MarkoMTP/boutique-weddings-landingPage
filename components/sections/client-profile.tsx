@@ -5,20 +5,32 @@ import { AnimatedSection } from "@/components/shared/animated-section";
 
 const profilePoints = [
   {
-    title: "Planning From Abroad",
-    body: "You want a trusted wedding planner in Lake Como, Italy who can guide venues, vendors, logistics, and guest experience with calm precision.",
+    title:
+      "Extended wedding celebrations shaped around Lake Como's atmosphere and timeless beauty",
   },
   {
-    title: "Full-Service Support",
-    body: "You are not looking for partial coordination. You want expert guidance from the first idea to the final moment of the wedding day.",
+    title:
+      "Planning that blends creativity with structure for flawless, effortless execution",
   },
   {
-    title: "Refined, Personal Design",
-    body: "You want guidance from wedding planners in Italy who understand refined design, local culture, and the details that make a celebration feel personal.",
+    title:
+      "Luxury wedding productions created for couples who value design, intention, and restraint",
+  },
+];
+
+const numberedProfiles = [
+  {
+    number: "01",
+    title: "Bespoke multi-day celebrations & elevated guest experiences",
   },
   {
-    title: "A Luxury-Level Investment",
-    body: "Most of our Lake Como weddings begin with an overall investment of €80,000+, depending on venue, guest count, and experience.",
+    number: "02",
+    title: "Creative, seamless planning with breathtaking execution",
+  },
+  {
+    number: "03",
+    title:
+      "High-end wedding productions for couples who value artistry and detail",
   },
 ];
 
@@ -44,36 +56,43 @@ export function ClientProfile() {
 
         {/* Right Column */}
         <div className="w-full lg:w-[45%] flex justify-center lg:justify-start lg:ml-12 relative z-20">
-          <AnimatedSection className="bg-sand/50 p-8 md:p-12 lg:p-14 w-full max-w-2xl shadow-xl shadow-charcoal/5 mx-6 lg:mx-0 my-10 lg:my-0">
+          <AnimatedSection className="bg-sand/40 border border-stone/30 p-8 md:p-12 lg:p-14 w-full max-w-2xl shadow-xl shadow-charcoal/5 mx-6 lg:mx-0 my-10 lg:my-0">
             <span className="text-[10px] tracking-[0.35em] uppercase text-olive font-medium">
-              Who This Is For
+              The Client Profile
             </span>
 
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal mt-4 mb-5 leading-[1.05] text-balance">
-              Designed for Couples Planning a{" "}
-              <span className="italic text-terracotta">
-                Refined Lake Como Wedding
-              </span>
+              Destination Wedding Planning in Lake Como for US Couples
             </h2>
 
             <div className="w-16 h-px bg-stone mb-6" />
 
-            <p className="text-olive/85 font-light text-base md:text-lg leading-relaxed mb-8">
-              We work with a limited number of international couples who want
-              full-service planning, calm guidance, and a celebration that feels
-              elegant, personal, and beautifully executed by a Como, Italy
-              wedding planner with deep local knowledge.
+            <p className="text-olive/85 font-light text-base md:text-lg leading-relaxed mb-7">
+              We work exclusively with couples from the United States and
+              internationally who want a wedding in Lake Como that feels nothing
+              like a standard event, defined by elegance, privacy, and a sense
+              of place. Every detail, from creative direction and guest
+              experience to logistics and production, is designed from scratch
+              around your vision and Lake Como's iconic villas, gardens, and
+              lakeside landscapes.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 border-t border-stone/30 pt-8">
-              {profilePoints.map((point, index) => (
-                <div key={index} className="border-b border-stone/30 pb-6">
-                  <h3 className="font-serif text-xl text-charcoal mb-2">
-                    {point.title}
+            <p className="font-serif text-2xl md:text-3xl text-charcoal leading-tight mt-8 mb-7">
+              No packages. No shortcuts. Just your vision, elevated.
+            </p>
+
+            <div className="space-y-0 border-y border-stone/30">
+              {numberedProfiles.map((item) => (
+                <div
+                  key={item.number}
+                  className="grid grid-cols-[3.5rem_1fr] gap-5 border-b border-stone/30 py-5 last:border-b-0"
+                >
+                  <span className="font-serif text-xl text-terracotta">
+                    {item.number}
+                  </span>
+                  <h3 className="font-serif text-xl text-charcoal leading-snug">
+                    {item.title}
                   </h3>
-                  <p className="text-olive/90 font-light leading-relaxed text-sm">
-                    {point.body}
-                  </p>
                 </div>
               ))}
             </div>
@@ -85,9 +104,9 @@ export function ClientProfile() {
                   element.scrollIntoView({ behavior: "smooth" });
                 }
               }}
-              className="mt-8 px-10 py-5 bg-black text-white text-[10px] tracking-[0.3em] uppercase font-medium hover:bg-black/80 transition-colors duration-500 w-fit"
+              className="mt-8 w-full px-6 py-5 bg-charcoal text-center text-cream text-[10px] tracking-[0.22em] uppercase font-medium hover:bg-charcoal/85 transition-colors duration-500 sm:w-fit sm:px-10 sm:tracking-[0.3em]"
             >
-              Request Availability
+              Book A Free Consultation
             </button>
           </AnimatedSection>
         </div>
