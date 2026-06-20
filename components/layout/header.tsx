@@ -8,12 +8,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navItems = [
-  { label: "Profile", href: "#profile" },
-  { label: "Lake Como", href: "#destinations" },
-  { label: "Villas", href: "#villas" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-  { label: "Our Work", href: "#work" },
+  { label: "Profile", href: "/#profile" },
+  { label: "Lake Como", href: "/#destinations" },
+  { label: "Venues", href: "/venues" },
+  { label: "Process", href: "/#process" },
+  { label: "About", href: "/#about" },
+  { label: "Our Work", href: "/#work" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -32,6 +32,23 @@ export function Header() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
+
+    if (href.startsWith("/")) {
+      const [path, hash] = href.split("#");
+      const targetPath = path || "/";
+
+      if (hash && window.location.pathname === targetPath) {
+        const element = document.querySelector(`#${hash}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        window.location.href = href;
+      }
+
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

@@ -6,11 +6,11 @@ import { Instagram, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
   experience: [
-    { label: "Lake Como", href: "#destinations" },
-    { label: "Villas", href: "#villas" },
-    { label: "Our Process", href: "#process" },
-    { label: "Our Work", href: "#work" },
-    { label: "About Giorgia", href: "#about" },
+    { label: "Lake Como", href: "/#destinations" },
+    { label: "Venues", href: "/venues" },
+    { label: "Our Process", href: "/#process" },
+    { label: "Our Work", href: "/#work" },
+    { label: "About Giorgia", href: "/#about" },
   ],
   connect: [
     { label: "Request Consultation", href: "#inquiry" },
@@ -20,6 +20,22 @@ const footerLinks = {
 
 export function Footer() {
   const handleNavClick = (href: string) => {
+    if (href.startsWith("/")) {
+      const [path, hash] = href.split("#");
+      const targetPath = path || "/";
+
+      if (hash && window.location.pathname === targetPath) {
+        const element = document.querySelector(`#${hash}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        window.location.href = href;
+      }
+
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
@@ -125,6 +126,12 @@ export function Hero() {
               className="w-full sm:w-auto rounded-none px-8 py-7 md:py-8 text-xs md:text-sm font-medium tracking-[0.2em] uppercase bg-charcoal text-cream hover:bg-charcoal/85 transition-all duration-500 border-0"
             >
               Tell Us About Your Wedding
+            </Button>
+            <Button
+              asChild
+              className="w-full sm:w-auto rounded-none border border-cream/60 bg-cream px-8 py-7 text-xs font-medium uppercase tracking-[0.2em] text-charcoal transition-all duration-500 hover:border-cream hover:bg-cream/90 md:py-8 md:text-sm"
+            >
+              <Link href="/venues">Explore Lake Como Venues</Link>
             </Button>
           </div>
 
